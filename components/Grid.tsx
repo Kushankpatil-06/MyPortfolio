@@ -1,13 +1,12 @@
-import React from 'react'
-import { BentoGrid,BentoGridItem } from './ui/Bento';
-import { gridItems, projects } from '../data/index';
+import React from "react";
+import { BentoGrid, BentoGridItem } from "./ui/Bento";
+import { gridItems, projects } from "../data/index";
 
 const Grid = () => {
-
   return (
     <section id="about">
       <BentoGrid>
-        { gridItems.map((item) => (
+        {gridItems.map((item) => (
           <BentoGridItem
             key={item.id}
             title={item.title}

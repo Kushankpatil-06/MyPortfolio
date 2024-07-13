@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
-import { cn } from "/utils/cn.ts";
+import { cn } from "../../utils/cn";
 import { BackgroundGradientAnimation } from "./Gradient";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../ui/MagicButton";
@@ -37,7 +37,7 @@ export const BentoGridItem = ({
   spareImg,
 }: {
   className?: string;
-  id: number;
+  id?: number;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   img?: string;
@@ -88,8 +88,9 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -120,7 +121,7 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {id === 2 && <GridGlobe />}
+          {/* {id === 2 && <GridGlobe />} */}
 
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
@@ -153,8 +154,9 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>

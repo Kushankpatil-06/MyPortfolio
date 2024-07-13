@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../../utils/cn";
+import { Router } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const PinContainer = ({
   children,
@@ -27,6 +29,7 @@ export const PinContainer = ({
   const onMouseLeave = () => {
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
+  const router = useRouter();
 
   return (
     <div
@@ -37,7 +40,7 @@ export const PinContainer = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div
+      <h1
         style={{
           perspective: "1000px",
           transform: "rotateX(70deg) translateZ(0deg)",
@@ -53,7 +56,7 @@ export const PinContainer = ({
         >
           <div className={cn(" relative z-50 ", className)}>{children}</div>
         </div>
-      </div>
+      </h1>
       <PinPerspective title={title} href={href} />
     </div>
   );

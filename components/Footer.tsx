@@ -1,6 +1,6 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { socialMedia } from "/data/index.ts";
+import { socialMedia } from "../data/index";
 import MagicButton from "./ui/MagicButton";
 
 const Footer = () => {
