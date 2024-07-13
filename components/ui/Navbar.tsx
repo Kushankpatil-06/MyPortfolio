@@ -7,7 +7,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Link from "next/link";
-import { cn } from "/utils/cn.ts";
+import { cn } from "../../utils/cn";
 
 export const FloatingNav = ({
   navItems,

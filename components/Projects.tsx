@@ -1,8 +1,9 @@
-import React from 'react'
-import { projects } from '../data/index';
-import { PinContainer } from './ui/3d-pin';
-import { FaLocationArrow } from 'react-icons/fa6';
-
+"use client";
+import React from "react";
+import { projects } from "../data/index";
+import { PinContainer } from "./ui/3d-pin";
+import { FaLocationArrow } from "react-icons/fa6";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -65,9 +66,12 @@ const Projects = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
+                  <Link
+                    href={"https://github.com/Kushankpatil-06"}
+                    className="flex lg:text-xl md:text-xs text-sm text-purple "
+                  >
+                    Click to visit
+                  </Link>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </div>
               </div>
@@ -79,4 +83,4 @@ const Projects = () => {
   );
 };
 
-export default Projects
+export default Projects;
